@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'views/home/home_view.dart';
+import 'locator.dart';
+import 'views/layout_tempalte/layout_template.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
               fontFamily: 'Open Sans',
             ),
       ),
-      home: HomeView(),
+      home: LayoutTemplate(),
     );
   }
 }
